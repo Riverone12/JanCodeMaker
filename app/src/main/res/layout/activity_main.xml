@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="biz.riverone.jancodemaker.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#666"
+        android:paddingTop="@dimen/mainPadding"
+        android:paddingStart="@dimen/mainPadding"
+        android:paddingLeft="@dimen/mainPadding"
+        android:paddingEnd="@dimen/mainPadding"
+        android:paddingRight="@dimen/mainPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/label_prefix"
+                    android:textSize="@dimen/textSizeMiddle"
+                    android:textColor="#ccc"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="@string/label_number"
+                    android:textSize="@dimen/textSizeMiddle"
+                    android:textColor="#ccc"
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="@string/label_check_digit"
+                    android:textSize="@dimen/textSizeMiddle"
+                    android:textColor="#ccc"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editTextPrefix"
+                    android:textSize="@dimen/textSizeLarge"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingStart="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/editTextNumber"
+                    android:textSize="@dimen/textSizeLarge"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingStart="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/textViewCheckDigit"
+                    android:textSize="@dimen/textSizeLarge"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/buttonGenerate"
+            android:text="@string/caption_generator"
+            android:textSize="@dimen/textSizeMiddle"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#666"
+        android:paddingBottom="@dimen/mainPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v4.widget.Space
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/buttonClear"
+            android:text="@string/caption_clear"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/buttonIncrement"
+            android:text="@string/caption_increment"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <android.support.v4.widget.Space
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/barcodeListView"
+        android:background="#333"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <FrameLayout
+        android:background="#666"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+    </FrameLayout>
+</LinearLayout>

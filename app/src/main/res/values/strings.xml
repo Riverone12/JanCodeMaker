@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">JANコードメーカー</string>
+
+    <!---->
+    <string name="banner_ad_unit_id">ca-app-pub-1882812461462801/2770175755</string>
+    <!---->
+    <!-- Test
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    -->
+
+    <string name="label_prefix">先頭2桁</string>
+    <string name="label_number">3～12桁目</string>
+    <string name="label_check_digit">C/D</string>
+
+    <string name="caption_generator">作成</string>
+    <string name="caption_clear">クリア</string>
+    <string name="caption_increment">+1</string>
+
+    <string name="menu_all_clear">バーコードをすべて削除する</string>
+
+    <string name="title_all_clear">削除の確認</string>
+    <string name="message_all_clear">作成したバーコードをすべて削除します。よろしいですか？</string>
+    <string name="caption_yes">はい</string>
+    <string name="caption_no">いいえ</string>
+</resources>
