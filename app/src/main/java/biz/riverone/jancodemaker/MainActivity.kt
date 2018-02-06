@@ -23,7 +23,7 @@ import java.text.DecimalFormat
  * JanCodeMaker: JANコードメーカー
  * Copyright (C) 2018 J.Kawahara
  * 2018.2.5 J.Kawahara 新規作成
- * 2018.2.6 J.Kawahara ver.1.00 初版公開
+ * 2018.2.6 J.Kawahara ver.1.01 初版公開
  */
 class MainActivity : AppCompatActivity(), ClearComfirmDialog.DialogListener {
 
@@ -75,9 +75,6 @@ class MainActivity : AppCompatActivity(), ClearComfirmDialog.DialogListener {
         // スワイプで要素を削除する準備
         val touchHelper = ItemTouchHelper(swipeListCallback)
         touchHelper.attachToRecyclerView(barcodeListView)
-
-        // 初期データを表示する
-        loadBarcodeList()
 
         // AdMob
         MobileAds.initialize(applicationContext, "ca-app-pub-1882812461462801~6109110371")
@@ -171,13 +168,6 @@ class MainActivity : AppCompatActivity(), ClearComfirmDialog.DialogListener {
     private fun addBarcode(jan: String) {
         barcodeListAdapter.addItem(0, jan)
         barcodeListView.scrollToPosition(0)
-    }
-
-    // 初期データを表示する
-    private fun loadBarcodeList() {
-        addBarcode("491234567890")
-        addBarcode("201234567890")
-        addBarcode("210987654321")
     }
 
     // スワイプでリサイクラービューの要素を削除する
