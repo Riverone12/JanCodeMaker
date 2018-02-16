@@ -24,6 +24,7 @@ import java.text.DecimalFormat
  * Copyright (C) 2018 J.Kawahara
  * 2018.2.5 J.Kawahara 新規作成
  * 2018.2.6 J.Kawahara ver.1.01 初版公開
+ * 2018.2.16 J.Kawahara ver.1.02 丸型アイコンを変更
  */
 class MainActivity : AppCompatActivity(), ClearComfirmDialog.DialogListener {
 
